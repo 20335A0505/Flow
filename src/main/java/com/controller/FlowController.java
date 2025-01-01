@@ -31,6 +31,7 @@ public class FlowController {
 	 public ResponseEntity<String> saveFlow(@RequestBody Map<String,Object> flowDetails) {
 	        try {
 	        	flowService.saveFlow(flowDetails);
+	        	System.err.println("post "+flowService.saveFlow(flowDetails));
 	            return ResponseEntity.ok("Flow saved successfully!");
 	        } catch (Exception e) {
 	            return ResponseEntity.status(500).body("Error saving flow: " + e.getMessage());

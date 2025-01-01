@@ -39,7 +39,6 @@ public class FlowService {
 	    System.out.println("VALUE " + flowDetails);
 	    
 	    Map<String, Object> inbound =(Map<String, Object>) flowDetails.get("Inbound");
-	    System.out.println("VALUE " + inbound); 
 	    String queue = "";
 	    if (inbound != null && inbound.containsKey("queue")) {
 	    	queue = (String) inbound.get("queue");
@@ -52,6 +51,8 @@ public class FlowService {
 	    	queue = (String) inbound.get("queuename");
 	    }
 	    	
+
+	    System.out.println("flow " + queue + " "); 
 	    flow.setFlowId(flowId);
 	    flow.setInbound(flowDetails.get("Inbound"));
 	    flow.setOutbound(flowDetails.get("Outbound"));

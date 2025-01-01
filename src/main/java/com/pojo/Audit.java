@@ -19,8 +19,9 @@ public class Audit {
 	String  	messageId;	
 	
 	
-	String		streamId, 				
-				streamName,
+	String		flowId, 				
+				flowName,
+				region,
 				inboundQueue, 
 				outboundQueue,
 				sourceTimeStamp,
@@ -30,9 +31,5 @@ public class Audit {
 				outAuditStatus,	
 				payload
 			;
-
-
-
-
 
 	}
