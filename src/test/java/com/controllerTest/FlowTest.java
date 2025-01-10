@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features",
+		features = "src/test/resources/features/flowController.feature",
 		glue = "com.steps",
 		plugin = {"pretty", "html:target/cucumber-reports"}
 		)

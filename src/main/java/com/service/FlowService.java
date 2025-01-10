@@ -50,9 +50,6 @@ public class FlowService {
 	    }else if (inbound != null && inbound.containsKey("queuename")) {
 	    	queue = (String) inbound.get("queuename");
 	    }
-	    	
-
-	    System.out.println("flow " + queue + " "); 
 	    flow.setFlowId(flowId);
 	    flow.setInbound(flowDetails.get("Inbound"));
 	    flow.setOutbound(flowDetails.get("Outbound"));
@@ -61,8 +58,10 @@ public class FlowService {
 	    flow.setStages(((String) flowDetails.get("stages")).trim().toUpperCase());
 	    flow.setEdges(flowDetails.get("flowedges"));
 	    flow.setNodes(flowDetails.get("flownodes"));
-
-	    System.out.println(" DB flow " + flow);
+	    System.out.println("flow " + flow);
+	    flow.setTransdata((String) flowDetails.get("Transdata"));
+	    
+	    System.out.println(" DB flow " + (String) flowDetails.get("Transdata"));
 
 	    flowRepo.save(flow);
 
